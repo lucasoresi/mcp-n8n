@@ -1,0 +1,11 @@
+{
+  "name": "mcp-server",
+  "version": "1.0.0",
+  "main": "mcp-launch.js",
+  "scripts": {
+    "start": "node mcp-launch.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/server-postgres": "^0.0.9"
+  }
+}
