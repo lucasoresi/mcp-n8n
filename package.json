@@ -6,6 +6,6 @@
     "start": "node mcp-launch.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/server-postgres": "^0.0.9"
+    "@modelcontextprotocol/server-postgres": "^0.6.2"
   }
 }
