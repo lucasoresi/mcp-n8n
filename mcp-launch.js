@@ -1,9 +1,13 @@
-const { startServer } = require("@modelcontextprotocol/server-postgres");
+const { exec } = require('child_process');
 
-startServer({
-  connectionString: process.env.DATABASE_URL
-}).then(() => {
-  console.log("✅ MCP Server running");
-}).catch((err) => {
-  console.error("❌ Error al iniciar el servidor MCP:", err);
+exec('npx -y @modelcontextprotocol/server-postgres "postgresql://postgres:Ls45423455.Lucasoresi2003@aws-0-us-east-2.pooler.supabase.com:6543/postgres"', (error, stdout, stderr) => {
+  if (error) {
+    console.error(`❌ Error: ${error.message}`);
+    return;
+  }
+  if (stderr) {
+    console.error(`❌ Error: ${stderr}`);
+    return;
+  }
+  console.log(`✅ MCP Server running`);
 });
